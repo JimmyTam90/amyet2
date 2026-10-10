@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import LegalPage from '@/components/LegalPage';
+import { absUrl } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Terms of Use | PrimeGearLab', alternates: { canonical: '/terms' } };
+export const metadata: Metadata = { title: 'Terms of Use | PrimeGearLab', alternates: { canonical: absUrl('/terms') } };
 
 export default function Page() {
   return (

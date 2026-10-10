@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import LegalPage from '@/components/LegalPage';
+import { absUrl } from '@/lib/site';
 import { CONTACT_EMAIL } from '@/components/Footer';
 
-export const metadata: Metadata = { title: 'Contact | PrimeGearLab', alternates: { canonical: '/contact' } };
+export const metadata: Metadata = { title: 'Contact | PrimeGearLab', alternates: { canonical: absUrl('/contact') } };
 
 export default function Page() {
   return (

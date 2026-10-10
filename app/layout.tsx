@@ -3,6 +3,7 @@ import { Barlow, Barlow_Condensed } from 'next/font/google';
 import type { ReactNode } from 'react';
 import Tracking from '@/components/Tracking';
 import { MERCHANT_ORIGIN } from '@/lib/affiliate';
+import { SITE_ORIGIN, absUrl } from '@/lib/site';
 import './globals.css';
 
 const display = Barlow_Condensed({ subsets: ['latin'], weight: ['600', '700', '800'], variable: '--font-display', display: 'swap' });
@@ -15,14 +16,14 @@ const OG_IMAGE =
   'https://www.amyet.com/cdn/shop/files/d7cf8746159726355664c973c03e53bd.jpg?v=1788493249&width=1200';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://primegearlab.com'),
+  metadataBase: new URL(SITE_ORIGIN),
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: '/' },
+  alternates: { canonical: absUrl() },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://primegearlab.com/',
+    url: absUrl(),
     siteName: 'PrimeGearLab',
     title: TITLE,
     description: DESCRIPTION,

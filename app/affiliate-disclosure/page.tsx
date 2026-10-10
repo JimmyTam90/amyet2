@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import LegalPage from '@/components/LegalPage';
+import { absUrl } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Affiliate Disclosure | PrimeGearLab', alternates: { canonical: '/affiliate-disclosure' } };
+export const metadata: Metadata = { title: 'Affiliate Disclosure | PrimeGearLab', alternates: { canonical: absUrl('/affiliate-disclosure') } };
 
 export default function Page() {
   return (
